@@ -1,0 +1,190 @@
+2026-11-21 08:59:12,960 - INFO - Se registró el cliente C001.
+2026-11-21 08:59:12,961 - INFO - La operacion 1 termino correctamente.
+2026-11-21 08:59:12,961 - INFO - Finalizo la operacion 1.
+2026-11-21 08:59:12,961 - ERROR - Error controlado en la operacion 2: El formato del correo no es valido.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 201, in <lambda>
+    ejecutar_operacion(2, "Intentar registrar un cliente con correo incorrecto", lambda: intentar_cliente_invalido(gestor, datos))
+                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 48, in intentar_cliente_invalido
+    cliente = Cliente(
+        "C002",
+    ...<2 lines>...
+        "3101234567"
+    )
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\cliente.py", line 14, in __init__
+    self.__correo = self.validar_correo(correo)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\cliente.py", line 31, in validar_correo
+    raise DatosInvalidosError("El formato del correo no es valido.")
+sistema.errores.DatosInvalidosError: El formato del correo no es valido.
+2026-11-21 08:59:12,969 - INFO - Finalizo la operacion 2.
+2026-11-21 08:59:12,970 - ERROR - Error controlado en la operacion 3: Ya existe un cliente con esa identificacion.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 202, in <lambda>
+    ejecutar_operacion(3, "Intentar registrar una identificación repetida", lambda: intentar_cliente_repetido(gestor, datos))
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 65, in intentar_cliente_repetido
+    gestor.registrar_cliente(cliente)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\gestor.py", line 26, in registrar_cliente
+    raise DatosInvalidosError("Ya existe un cliente con esa identificacion.")
+sistema.errores.DatosInvalidosError: Ya existe un cliente con esa identificacion.
+2026-11-21 08:59:12,973 - INFO - Finalizo la operacion 3.
+2026-11-21 08:59:12,973 - INFO - Se registró el servicio S001.
+2026-11-21 08:59:12,973 - INFO - La operacion 4 termino correctamente.
+2026-11-21 08:59:12,973 - INFO - Finalizo la operacion 4.
+2026-11-21 08:59:12,973 - INFO - Se registró el servicio S002.
+2026-11-21 08:59:12,974 - INFO - La operacion 5 termino correctamente.
+2026-11-21 08:59:12,974 - INFO - Finalizo la operacion 5.
+2026-11-21 08:59:12,974 - INFO - Se registró el servicio S003.
+2026-11-21 08:59:12,974 - INFO - La operacion 6 termino correctamente.
+2026-11-21 08:59:12,974 - INFO - Finalizo la operacion 6.
+2026-11-21 08:59:12,974 - ERROR - Error controlado en la operacion 7: La tarifa debe ser mayor que cero.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 206, in <lambda>
+    ejecutar_operacion(7, "Intentar crear un servicio con tarifa negativa", lambda: intentar_servicio_invalido(gestor, datos))
+                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 96, in intentar_servicio_invalido
+    servicio = ReservaSalas("S004", "Sala no valida", -5000, 10)
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\servicios.py", line 11, in __init__
+    self.validar_tarifa(tarifa_hora)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\servicio.py", line 43, in validar_tarifa
+    raise DatosInvalidosError("La tarifa debe ser mayor que cero.")
+sistema.errores.DatosInvalidosError: La tarifa debe ser mayor que cero.
+2026-11-21 08:59:12,975 - INFO - Finalizo la operacion 7.
+2026-11-21 08:59:12,976 - INFO - Se creo la reserva R001.
+2026-11-21 08:59:12,976 - INFO - Reserva R001 confirmada.
+2026-11-21 08:59:12,976 - INFO - Reserva R001 procesada. Total: $107,100.00
+2026-11-21 08:59:12,976 - INFO - Termino el intento de procesamiento de la reserva R001.
+2026-11-21 08:59:12,976 - INFO - La operacion 8 termino correctamente.
+2026-11-21 08:59:12,976 - INFO - Finalizo la operacion 8.
+2026-11-21 08:59:12,976 - INFO - Se creo la reserva R002.
+2026-11-21 08:59:12,976 - INFO - Reserva R002 cancelada.
+2026-11-21 08:59:12,976 - INFO - Se restablecio la disponibilidad del servicio S003.
+2026-11-21 08:59:12,976 - ERROR - Error controlado en la operacion 9: El servicio no se encuentra disponible.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 208, in <lambda>
+    ejecutar_operacion(9, "Intentar confirmar una reserva con servicio no disponible", lambda: intentar_servicio_no_disponible(gestor, datos))
+                                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 116, in intentar_servicio_no_disponible
+    return reserva.confirmar()
+           ~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\reserva.py", line 57, in confirmar
+    raise ServicioNoDisponibleError("El servicio no se encuentra disponible.")
+sistema.errores.ServicioNoDisponibleError: El servicio no se encuentra disponible.
+2026-11-21 08:59:12,978 - INFO - Finalizo la operacion 9.
+2026-11-21 08:59:12,978 - ERROR - Error controlado en la operacion 10: La duracion debe ser mayor que cero.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 209, in <lambda>
+    ejecutar_operacion(10, "Intentar crear una reserva con duración invalida", lambda: intentar_duracion_incorrecta(gestor, datos))
+                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 128, in intentar_duracion_incorrecta
+    gestor.crear_reserva("R003", "C001", "S002", 0)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\gestor.py", line 70, in crear_reserva
+    nueva_reserva = Reserva(
+        identificacion,
+    ...<2 lines>...
+        duracion
+    )
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\reserva.py", line 24, in __init__
+    servicio.validar_parametros(duracion)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\servicios.py", line 50, in validar_parametros
+    self.validar_duracion(duracion)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\servicio.py", line 50, in validar_duracion
+    raise DatosInvalidosError("La duracion debe ser mayor que cero.")
+sistema.errores.DatosInvalidosError: La duracion debe ser mayor que cero.
+2026-11-21 08:59:12,980 - INFO - Finalizo la operacion 10.
+2026-11-21 08:59:12,980 - ERROR - Error controlado en la operacion 11: No se encontro el cliente con identificacion C999.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 210, in <lambda>
+    ejecutar_operacion(11, "Intentar reservar con un cliente que no existe", lambda: intentar_cliente_que_no_existe(gestor, datos))
+                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 133, in intentar_cliente_que_no_existe
+    gestor.crear_reserva("R004", "C999", "S002", 2)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\gestor.py", line 67, in crear_reserva
+    cliente = self.buscar_cliente(id_cliente)
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\gestor.py", line 49, in buscar_cliente
+    raise ClienteNoEncontradoError(
+        f"No se encontro el cliente con identificacion {identificacion}."
+    )
+sistema.errores.ClienteNoEncontradoError: No se encontro el cliente con identificacion C999.
+2026-11-21 08:59:12,981 - INFO - Finalizo la operacion 11.
+2026-11-21 08:59:12,981 - INFO - Se creo la reserva R005.
+2026-11-21 08:59:12,981 - INFO - Reserva R005 confirmada.
+2026-11-21 08:59:12,981 - INFO - Reserva R005 cancelada.
+2026-11-21 08:59:12,981 - INFO - La operacion 12 termino correctamente.
+2026-11-21 08:59:12,981 - INFO - Finalizo la operacion 12.
+2026-11-21 08:59:12,981 - ERROR - Error controlado en la operacion 13: No se puede cancelar una reserva en este estado.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 212, in <lambda>
+    ejecutar_operacion(13, "Intentar cancelar una reserva que ya fue procesada", lambda: intentar_cancelar_reserva_procesada(gestor, datos))
+                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 146, in intentar_cancelar_reserva_procesada
+    return reserva.cancelar()
+           ~~~~~~~~~~~~~~~~^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\reserva.py", line 67, in cancelar
+    raise ReservaInvalidaError("No se puede cancelar una reserva en este estado.")
+sistema.errores.ReservaInvalidaError: No se puede cancelar una reserva en este estado.
+2026-11-21 08:59:12,983 - INFO - Finalizo la operacion 13.
+2026-11-21 08:59:12,983 - INFO - Se creo la reserva R006.
+2026-11-21 08:59:12,983 - INFO - Reserva R006 confirmada.
+2026-11-21 08:59:12,983 - INFO - Termino el intento de procesamiento de la reserva R006.
+2026-11-21 08:59:12,983 - INFO - Reserva R006 cancelada.
+2026-11-21 08:59:12,983 - ERROR - Error controlado en la operacion 14: No se pudo calcular el costo de la reserva.
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\reserva.py", line 82, in procesar
+    total = self.__servicio.calcular_costo(
+        self.__duracion,
+        impuesto,
+        descuento
+    )
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\servicios.py", line 85, in calcular_costo
+    return self.calcular_total(costo, impuesto, descuento)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\servicio.py", line 72, in calcular_total
+    self.validar_impuesto_descuento(impuesto, descuento)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\servicio.py", line 60, in validar_impuesto_descuento
+    raise DatosInvalidosError("El impuesto debe estar entre 0 y 100.")
+sistema.errores.DatosInvalidosError: El impuesto debe estar entre 0 y 100.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 14, in ejecutar_operacion
+    resultado = funcion()
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 213, in <lambda>
+    ejecutar_operacion(14, "Comprobar el encadenamiento de excepciones", lambda: probar_encadenamiento(gestor, datos))
+                                                                                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\main.py", line 156, in probar_encadenamiento
+    return reserva.procesar(impuesto=150)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "c:\Users\Diaz\Desktop\Unad\Periodo 4\Programacion\Tarea 4\SoftwareFJ_Gestion\sistema\reserva.py", line 90, in procesar
+    raise ReservaInvalidaError(
+        "No se pudo calcular el costo de la reserva."
+    ) from error
+sistema.errores.ReservaInvalidaError: No se pudo calcular el costo de la reserva.
+2026-11-21 08:59:12,985 - INFO - Finalizo la operacion 14.
+2026-11-21 08:59:12,985 - INFO - La operacion 15 termino correctamente.
+2026-11-21 08:59:12,985 - INFO - Finalizo la operacion 15.
+2026-11-21 08:59:12,986 - INFO - Termino la ejecucion de las simulaciones.
