@@ -14,15 +14,15 @@ La informacion se maneja con objetos y listas mientras el programa esta abierto.
 
 ## Organización
 
-sistema/cliente.py: contiene la clase Cliente.
-sistema/entidad.py: contiene la clase abstracta Entidad.
-sistema/servicio.py: contiene la clase abstracta Servicio.
-sistema/servicios.py: contiene los tres tipos de servicios.
-sistema/reserva.py: contiene la clase Reserva.
-sistema/gestor.py: administra las listas de clientes, servicios y reservas.
-sistema/errores.py: contiene las excepciones personalizadas.
-sistema/registro.py: guarda los eventos y errores.
-main.py: ejecuta las simulaciones del sistema.
+- `sistema/cliente.py`: contiene la clase `Cliente`.
+- `sistema/entidad.py`: contiene la clase abstracta `Entidad`.
+- `sistema/servicio.py`: contiene la clase abstracta `Servicio`.
+- `sistema/servicios.py`: contiene los tres tipos de servicios.
+- `sistema/reserva.py`: contiene la clase `Reserva`.
+- `sistema/gestor.py`: administra las listas de clientes, servicios y reservas.
+- `sistema/errores.py`: contiene las excepciones personalizadas.
+- `sistema/registro.py`: guarda los eventos y errores.
+- `main.py`: ejecuta las simulaciones del sistema.
 
 ## Requisitos
 
@@ -33,20 +33,17 @@ main.py: ejecuta las simulaciones del sistema.
 
 Abre una terminal en la carpeta principal del proyecto y ejecuta:
 
-```bash
-py main.py
-```
+`py main.py`
 
 En otros sistemas tambien se puede utilizar:
 
-```bash
-python main.py
-```
+`python main.py`
 
 ## Registros
 
-Al ejecutar el programa se crea la carpeta "logs" si no existe. Alli se guarda el archivo "software_fj.log", que contiene los eventos y errores de las pruebas.
+Al ejecutar el programa se crea la carpeta "logs" si no existe. Alli se guarda el archivo "software_fj.log", que contiene los eventos y errores de las pruebas. 
+Incluí el archivo `.log` como evidencia de las pruebas realizadas durante el desarrollo.
 
 ## Nota
 
-Las simulaciones del archivo "main.py" incluyen operaciones correctas y otras que se realizan con datos incorrectos para comprobar que el sistema controle los errores y pueda continuar.
+En las simulaciones del archivo "main.py" se incluyen operaciones correctas y otras que se realizaron con datos incorrectos para así comprobar que este sistema controle los errores y pueda continuar.
